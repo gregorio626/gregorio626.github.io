@@ -1,1 +1,9 @@
-
+.menu-list {
+  padding: 0;
+  margin: 0;
+}
+ 
+.menu-list li a {
+  text-decoration: none;
+  display: block;
+}
