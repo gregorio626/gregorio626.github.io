@@ -1,0 +1,73 @@
+/* html {
+  background: url('https://freelyphotos.com/wp-content/uploads/2017/11/michael-mroczek-440382-1024x683.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.cb-container {
+  /* background-color: green; */
+
+  margin: 0;
+}
+
+.cb-form {
+  /* background-color: red; */
+
+  /* To center the form on the page */
+  margin: 0 auto;
+  width: 300px;
+
+  padding: 20px;
+}
+
+.cb-title {
+  /* background-color: blue; */
+
+  margin: 0;
+  font-size: 42px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.cb-input-wrapper {
+  /* background-color: yellow; */
+
+  margin-bottom: 20px;
+}
+
+.cb-label, .cb-input {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+.cb-label {
+  /* To make sure all labels have the same size and are properly aligned */
+  display: inline-block;
+  text-align: right;
+  width: 90px;
+}
+
+.cb-input {
+  /* To give all text fields the same size */
+  width: 200px;
+  height: 30px;
+  box-sizing: border-box;
+
+  /* to make only the bottom border visible */
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+
+.cb-submit input{
+  width: 100%;
+  height: 30px;
+}

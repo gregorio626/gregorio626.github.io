@@ -1,0 +1,83 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+html{
+  background-image: url('https://freelyphotos.com/wp-content/uploads/2017/11/michael-mroczek-440382-1024x683.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.nav {
+  margin: 0px 20px 0px;
+  padding: 10px;
+
+  display: none;
+}
+
+.navbar-item {
+  text-align: center;
+  display: block;
+  float: left;
+  padding: 0px 40px;
+  font-family: 'Montserrat', sans-serif;
+  color: #EFE6DD;
+}
+
+
+
+
+
+
+
+.cb-form {
+  /* To position the form in the horizonta center */
+  margin: 0 auto;
+  width: 300px;
+  margin-top: 15%;
+
+}
+
+.cb-title {
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #EFE6DD;
+  margin: 0;
+}
+
+.cb-input-wrapper {
+  width: auto;
+}
+
+.cb-input {
+  width: 100%;
+  margin: 14px 0 0 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  border: 2px solid #333;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 6px 10px 6px 20px;
+}
+
+.cb-btn-submit {
+  font-size: 14px;
+  background-color: #05386B;
+  color: #edf5e1;
+}
+
+@media only screen and (min-width: 650px) {
+  .cb-form {
+    width: 600px;
+  }
+
+  .cb-title {
+    font-size: 60px;
+  }
+  .cb-input {
+    font-size: 24px;
+  }
+}
