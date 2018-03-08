@@ -1,7 +1,10 @@
-
-
+/* @brief gets the user's current coordinates
+*  @return void
+*  Created: 03/06/18
+*  TODO 03/07/18 Convert to jQuery as much as possible
+*/
 function getLocation() {
-  var x = document.GetElementById("corods");
+  var x = document.GetElementById("coords");
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -10,13 +13,23 @@ function getLocation() {
     }
 }
 
+/* @brief puts the user's coordinates into the text element on the page
+*  @return void
+*  Created: 03/05/18
+*  TODO 03/07/18 Convert to jQuery as much as possible
+*/
 function showPosition(position) {
 
-  var x = document.GetElementById("corods");
+  var x = document.GetElementById("coords");
   x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
 }
 
-/*TODO: Still needs to check against backspace being pressed */
+/* @brief formats the phone number as the user types
+*  @return void
+*  Created: 03/06/18
+*  TODO: 03/06/18 Still needs to check against backspace being pressed
+*  TODO 03/07/18 Convert to jQuery as much as possible
+*/
 function formatPhoneInput() {
   var phone=document.getElementById("cb-phone"); //Get the value in the box.
   var len=phone.value.length;
@@ -31,13 +44,71 @@ function formatPhoneInput() {
 }
 
 
-function cbSubmitAlert() {
-  var fname = document.getElementById("cb-fname").value;
-  var msg;
-  if(fname.length > 0) {
-    msg = "Thank you, "+fname+". You have been successfully checked in!";
-  } else {
-    msg = "Oops! It looks like you forgot to put your name in. Who am I checking in?";
+/* @brief Verify that all the inputs have acceptable values(and not null) before inserting data
+*  @return void
+*  Created: 03/07/18
+*  TODO 03/07/18 If any errors, make the input border red
+*  TODO 03/07/18 Convert to jQuery as much as possible
+*/
+function validateCBForm() {
+
+  var errorMsg = ""; // The message displayed in the alert
+  var errorFields = ""; // A list of all elements that did not pass validation
+
+  /* Get the input values entered by the user */
+  var fName = $("#cb-fname");
+  var lName = $("#cb-lname");
+  var email = $("#cb-email");
+  var phone = $("#cb-phone");
+  var carrier = $("#cb-carrier");
+  var postal = $("#cb-postal");
+
+  /* First name */
+  if(!fName.val()) {
+    fName.css('border-color', 'red');
+    errorFields+= "First Name ";
   }
-  alert(msg);
+  /* Last Name */
+  if(!lName.val()) {
+    errorFields+= "Last Name ";
+  }
+  /* Email address */
+  if(!email.val()) {
+    errorFields+= "Email ";
+  }
+  /* Phone */
+  if(!phone.val()) {
+    errorFields+= "Phone ";
+  }
+  /* Carrier */
+  if(carrier.val()=="default") {
+    errorFields+= "Carrier ";
+  }
+  /* Postal */
+  if(!postal.val()) {
+    errorFields+= "Postal ";
+  }
+
+  if(errorFields!="") {
+    alert("Oh no! The following field(s) weren't entered correctly:\n" + errorFields);
+  }
+
+}
+
+/* @brief Function that is ran when the user clicks the submit button
+*  @return void
+*  Created: 03/06/18
+*  TODO 03/07/18 Convert to jQuery as much as possible
+*/
+function cbSubmitAlert() {
+  // var fName = document.getElementById("cb-fname").value;
+  // var msg;
+  // if(fName.length > 0) {
+  //   msg = "Thank you, "+fName+". You have been successfully checked in!";
+  // } else {
+  //   msg = "Oops! It looks like you forgot to put your name in. Who am I checking in?";
+  // }
+  // alert(msg);
+
+  validateCBForm();
 }
