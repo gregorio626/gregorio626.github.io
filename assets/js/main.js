@@ -1,3 +1,12 @@
+/* This handles making the nav meu responsive(drop-down) when in mobile display*/
+$("#primary-nav-menu").on("click", function() {
+  if (!$( "#primary-nav" ).hasClass("close")) {
+    $( "#primary-nav" ).addClass("close");
+  } else {
+    $( "#primary-nav" ).removeClass("close");
+  }
+});
+
 /* @brief gets the user's current coordinates
 *  @return void
 *  Created: 03/06/18

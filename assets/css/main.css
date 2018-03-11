@@ -11,6 +11,94 @@ html{
   height: 100%;
 }
 
+/*------------------------------------*/
+/*              NAV MENU              */
+/*------------------------------------*/
+#primary-nav ul {
+  margin: 0;
+  list-style: none;
+  background: #1c1c1c;
+  padding: 5px 0;
+}
+
+#primary-nav li a {
+  display: block;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+  height: 2em;
+  border-bottom: 1px solid #383838;
+  font-size: 14px;
+}
+
+
+#primary-nav li:last-child a{
+  border-bottom: none;
+}
+
+#primary-nav li a:hover,
+#primary-nav li a:focus {
+  color: #1c1c1c;
+  background: #ccc;
+}
+
+#primary-nav li a.active {
+  color: rgb(255, 127, 39);
+}
+@media only screen and (max-width: 843px) {
+  .close#primary-nav li:not(:first-child) a {
+    display: none;
+  }
+
+  .close#primary-nav li:first-child a {
+    border-bottom: none;
+  }
+}
+
+
+/*-----------------------------------*/
+/*           MEDIA QUERIES           */
+/*-----------------------------------*/
+/* (Desktop)
+*  To be ran when the screen is larger than 768px wide
+*/
+@media only screen and (min-width: 768px) {
+  #primary-nav {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+  }
+
+  #primary-nav ul{
+    padding: 10px 10px;
+  }
+
+  #primary-nav li {
+    display: inline-block;
+  }
+
+  #primary-nav li a {
+    border-bottom: none;
+    padding: 0 10px;
+    font-size: 16px;
+  }
+
+  #primary-nav li:first-child {
+    display: none;
+  }
+
+}
+
+
+
+
+
 .cb-form {
   /* To position the form in the horizonta center */
   margin: 0 auto;
