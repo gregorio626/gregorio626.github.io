@@ -4,7 +4,7 @@ html, body {
 }
 
 html{
-  background-image: url('https://freelyphotos.com/wp-content/uploads/2017/11/michael-mroczek-440382-1024x683.jpg');
+  background-image: url('https://static.pexels.com/photos/518245/pexels-photo-518245.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,7 +50,8 @@ html{
 #primary-nav li a.active {
   color: rgb(255, 127, 39);
 }
-@media only screen and (max-width: 843px) {
+
+@media only screen and (max-width: 768px) {
   .close#primary-nav li:not(:first-child) a {
     display: none;
   }
@@ -111,7 +112,7 @@ html{
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  color: #EFE6DD;
+  color: #1c1c1c;
   margin: 0;
 }
 
